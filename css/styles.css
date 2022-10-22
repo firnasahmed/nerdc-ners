@@ -1815,6 +1815,15 @@ img,
     left : -15px;
 }
 
+#mybutton {
+    display: none;
+    color: #ffffff;
+    background-color: #ff0000;
+    width: 8em;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+  }
 /* dots jump */
 .dots-jump>div {
     -webkit-animation : dots-jump 1.2s infinite ease;
@@ -2248,6 +2257,7 @@ button.btn--stroke {
     background : transparent;
     border     : 1px solid var(--color-btn-stroke);
     color      : var(--color-btn-stroke-text);
+    
 }
 
 .btn--stroke:focus,
@@ -2257,6 +2267,7 @@ button.btn--stroke:hover {
     background : var(--color-btn-stroke-hover);
     border     : 1px solid var(--color-btn-stroke-hover);
     color      : var(--color-btn-stroke-hover-text);
+    
 }
 
 .btn--pill,
@@ -3253,6 +3264,28 @@ img.u-pull-left {
     border : 1px solid transparent;
 }
 
+/* --------------------------------------------------------------------
+ * ## Launch
+ * -------------------------------------------------------------------- */
+ .s-intro__launch {
+    --color-btn-stroke       : rgba(255, 255, 255, .15);
+    --color-btn-stroke-hover : rgba(0, 0, 0, .25);
+    --color-btn-stroke-text  : white;
+    z-index                  : 2;
+    position                 : absolute;
+    bottom                   : 10rem;
+    right                    : 100rem;
+}
+
+.s-intro__launch button.btn--stroke {
+    margin : 0;
+}
+
+.s-intro__launch button.btn--stroke:focus,
+.s-intro__launch button.btn--stroke:hover {
+    border : 1px solid transparent;
+}
+
 /* -------------------------------------------------------------------
  * ## modal 
  * ------------------------------------------------------------------- */
@@ -4105,4 +4138,45 @@ img.u-pull-left {
         font-size   : var(--text-xs);
         line-height : var(--vspace-0_5);
     }
+}
+
+.golden-btn + .golden-btn { margin-top: 1em; }
+
+.golden-btn {
+    
+  display: inline-block;
+  outline: none;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1em;
+  box-sizing: border-box;
+  border: none;
+  border-radius: .3em;
+  height: 2.75em;
+  line-height: 2.5em;
+  padding: 0 1em;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
+              inset 0 -2px 5px 1px rgba(250,227,133,1),
+              inset 0 -1px 1px 3px rgba(139,66,8,1);
+  background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+  border: 1px solid #a55d07;
+  color: rgb(120,50,5);
+  text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  background-size: 100% 100%;
+  background-position:center;
+}
+.golden-btn:focus,
+.golden-btn:hover {
+  background-size: 150% 150%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23),
+                inset 0 -2px 5px 1px #b17d10,
+                inset 0 -1px 1px 3px rgba(250,227,133,1);
+  border: 1px solid rgba(165,93,7,.6);
+  color: rgba(120,50,5,.8);
+}
+.golden-btn:active {
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
+              inset 0 -2px 5px 1px #b17d10,
+                inset 0 -1px 1px 3px rgba(250,227,133,1);
 }

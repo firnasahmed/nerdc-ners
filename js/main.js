@@ -1,5 +1,5 @@
 /* ===================================================================
- *  Knox 1.0.0 - Main JS
+ *  NERS 2022 - Main JS
  *
  *
  * ------------------------------------------------------------------- */
@@ -13,7 +13,7 @@
     const cfg = {
 
         // Countdown Timer Final Date
-        finalDate : 'December 21, 2022 10:00:00',
+        finalDate : 'November 22, 2022 22:42:00',
         // MailChimp URL
         mailChimpURL : 'https://facebook.us1.list-manage.com/subscribe/post?u=1abf75f6981256963a47d197a&amp;id=37c6d8f4d6' 
 
@@ -72,6 +72,7 @@
         const minutesSpan = document.querySelector('.counter .ss-minutes');
         const secondsSpan = document.querySelector('.counter .ss-seconds');
         let timeInterval;
+        var text = document.getElementById("launcheButton");
 
         if (!(daysSpan && hoursSpan && minutesSpan && secondsSpan)) return;
 
@@ -84,7 +85,15 @@
                 if (timeInterval) { 
                     clearInterval(timeInterval);
                 }
+
+                text.style.display = "block";
                 return;
+            }
+            
+
+            else{
+                text.style.display = "block"; //Have to remove this
+                //text.style.display = "none";
             }
 
             let days = Math.floor( diff/(1000*60*60*24) );
@@ -108,14 +117,11 @@
             hoursSpan.textContent = hours;
             minutesSpan.textContent = minutes;
             secondsSpan.textContent = seconds;
-
         }
 
         timer();
         timeInterval = setInterval(timer, 1000);
     };
-
-
 
    /* Modal
     * ---------------------------------------------------- */ 

@@ -49,7 +49,7 @@
 
         <header class="s-intro__header"> 
             <div class="s-intro__logo">
-                <a class="logo" href="index-particles.html">
+                <a class="logo" href="#top">
                     <img src="images/nerdc-logo2.png" alt="Homepage">
                 </a>
             </div>
@@ -112,22 +112,23 @@
                                 </ul>
 
                             </div> <!-- end s-intro-content__bottom-block -->
-
                         </div> <!-- end s-intro-content__bottom -->
-
                     </div>
-
+                    
                     <img align="right" src="images/b1.png" alt="" width="70%" height="70%" style="position: relative; bottom: 100%; right: -50%; z-index:999;">
                 </div> <!-- s-intro__content -->
-                
-
-
-
+<!-- 
         <div class="s-intro__notify">
             <button type="button" class="btn--stroke btn--small ss-modal-trigger">
                 Notify Me
             </button>
-        </div> <!-- s-intro__notify -->
+        </div>
+     -->
+        
+        <div class="s-intro__launch">
+            <button id="launcheButton" style="display:none" onclick="location.href='readBook.html'" class="golden-btn">Read Now !</button>
+        </div>
+
 
         <div hidden class="s-intro__modal ss-modal">
             <div class="ss-modal__inner">
@@ -175,7 +176,7 @@
             <div class="column">
 
                 <h1 class="text-huge-title text-center">
-                    NERS - 2022.
+                    NERS - 2022
                 </h1>
 
                 <nav class="tab-nav">
@@ -211,14 +212,12 @@
 
                         <div class="row">
                             <div class="column">
-                                <p class="lead">
+                                <p class="text-pretitle">
                                     National Engineering Research and Development Centre (NERDC) of Sri Lanka 
                                     is the premier engineering R&amp;D organization in Sri Lanka, engaging with
                                      multidisciplinary innovations and,  R & D activities in engineering for
                                       more than four decades.
-                                </p>
-
-                                <p>
+                                    <br><br>
                                     National Engineering Research Symposium (NERS) is the annual research conference 
                                     conducted by NERDC, since the year 2014, in parallel to the “National Science Week 
                                     published by the government. The main objectives of this symposium are to promenade 
@@ -229,19 +228,18 @@
                                     to drive the nation through expert solutions for self-reliance in Sri Lanka. By focusing 
                                     to alleviate the inconveniences made due to the current crisis, this symposium will be 
                                     conducted in 2022 as “NERS 2022” with the theme“Driving the nation through engineering 
-                                    solutions for self-reliance”.NERDC invites all dynamic researchers to publish their 
+                                    solutions for self-reliance”. NERDC invites all dynamic researchers to publish their 
                                     research on NERS 2022.
                                 </p>
 
-                               
+
                                 <img align="right" src="images/b2.png" alt="" width="100%" height="100%" style="position: relative; bottom: 0%; right: 0%; z-index:999;">
                                 
-                                <center class="smoothscroll"><a href="#top" class="btn btn--stroke u-centered">Read Now</a></center>
-                                
-                                
+                                <center class="smoothscroll"><a href="#top" class="btn btn--stroke u-centered">Launched ?</a></center>
+
+
                             </div>
                         </div>
-                        
                     </div> <!-- end 01 - tab about -->
 
                     <!-- 02 - tab services -->
@@ -418,10 +416,12 @@
 
     <!-- Java Script
     ================================================== -->
+
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/particle-settings.js"></script>
+    
 
 </body>
 
