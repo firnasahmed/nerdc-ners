@@ -1212,6 +1212,10 @@ textarea {
     width : 100%;
 }
 
+.u-centered {
+    width : 20%;
+}
+
 .u-pull-left {
     float : left;
 }
