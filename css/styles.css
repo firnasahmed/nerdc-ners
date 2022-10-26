@@ -616,7 +616,7 @@ textarea {
  */
 .column {
     display : block;
-    flex    : 1 1 0%;
+    flex    : 1 1 100%;
     padding : 0 var(--gutter);
 }
 
@@ -3273,8 +3273,8 @@ img.u-pull-left {
     --color-btn-stroke-text  : white;
     z-index                  : 2;
     position                 : absolute;
-    bottom                   : 10rem;
-    right                    : 100rem;
+    bottom                   : 10%;
+    right                    : 50%;
 }
 
 .s-intro__launch button.btn--stroke {
@@ -3913,8 +3913,8 @@ img.u-pull-left {
     transform  : translate(0, 100%);
     transition : all 0.6s cubic-bezier(0.28, 0.12, 0.22, 1);
     position   : fixed;
-    bottom     : 6.4rem;
-    right      : 3.6rem;
+    bottom     : 5%;
+    right      : 5%;
 }
 
 .ss-go-top svg {
@@ -3991,6 +3991,7 @@ img.u-pull-left {
     font-size   : calc(var(--text-size) * 0.75);
     line-height : var(--vspace-0_875);
     position    : relative;
+    left: 5%;
 }
 
 .ss-copyright span {
@@ -4026,18 +4027,25 @@ img.u-pull-left {
         height : 5.2rem;
         width  : 5.2rem;
     }
+
+    .u-centered {
+        width : 50%;
+    }
+    
 }
 
 @media screen and (max-width: 1100px) {
     .ss-go-top a span {
         display : none;
     }
+
 }
 
 @media screen and (max-width: 1000px) {
     .contact-email {
         --multiplier : .882;
     }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -4049,12 +4057,22 @@ img.u-pull-left {
         font-size   : var(--text-sm);
         line-height : var(--vspace-0_875);
     }
+
+    .ResponsiveImage{
+        opacity: 0%;
+    }
+
 }
 
 @media screen and (max-width: 700px) {
     .contact-email {
         --multiplier : .6;
     }
+
+    .ResponsiveImage{
+        opacity: 0%;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -4109,6 +4127,11 @@ img.u-pull-left {
         height : 4.4rem;
         width  : 4.4rem;
     }
+
+    .ResponsiveImage{
+        opacity: 0%;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -4127,6 +4150,11 @@ img.u-pull-left {
     .ss-copyright span::after {
         display : none;
     }
+
+    .ResponsiveImage{
+        opacity: 0%;
+    }
+
 }
 
 @media screen and (max-width: 400px) {
@@ -4138,6 +4166,11 @@ img.u-pull-left {
         font-size   : var(--text-xs);
         line-height : var(--vspace-0_5);
     }
+
+    .ResponsiveImage{
+        opacity: 0%;
+    }
+
 }
 
 .golden-btn + .golden-btn { margin-top: 1em; }
@@ -4179,4 +4212,13 @@ img.u-pull-left {
   box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
               inset 0 -2px 5px 1px #b17d10,
                 inset 0 -1px 1px 3px rgba(250,227,133,1);
+}
+
+.ResponsiveImage{
+    width: 40%;
+    height: auto;
+    position: relative;
+    bottom: 80%; 
+    right: -64%;
+    z-index:-1;
 }

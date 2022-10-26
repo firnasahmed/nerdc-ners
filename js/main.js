@@ -13,7 +13,7 @@
     const cfg = {
 
         // Countdown Timer Final Date
-        finalDate : 'November 22, 2022 22:42:00',
+        finalDate : 'November 17, 2022 10:00:00',
         // MailChimp URL
         mailChimpURL : 'https://facebook.us1.list-manage.com/subscribe/post?u=1abf75f6981256963a47d197a&amp;id=37c6d8f4d6' 
 
@@ -92,8 +92,10 @@
             
 
             else{
-                text.style.display = "block"; //Have to remove this
+                text.style.display = "block"; //Have to remove this when the demo ends and Have to uncomment the following line
                 //text.style.display = "none";
+
+                // To visible the Read Now Button on Launching time
             }
 
             let days = Math.floor( diff/(1000*60*60*24) );
