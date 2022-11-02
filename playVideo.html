@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>NERS Launching</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<style>
+/* From uiverse.io by @Custyyyy */
+body{
+    background: rgb(17, 17, 17);
+    font-family: "Gothic A1", sans-serif;
+}
+#bottone1 {
+ padding-left: 33px;
+ padding-right: 33px;
+ padding-bottom: 16px;
+ padding-top: 16px;
+ border-radius: 9px;
+ background: #d5f365;
+ border: none;
+ font-family: inherit;
+ text-align: center;
+ cursor: pointer;
+ transition: 0.4s;
+}
+
+#bottone1:hover {
+ box-shadow: 7px 5px 56px -14px #C3D900;
+}
+
+#bottone1:active {
+ transform: scale(0.97);
+ box-shadow: 7px 5px 56px -10px #C3D900;
+}
+</style>
+</head>
+<body>
+
+    <!-- https://www.youtube.com/ -->
+
+    <script type="text/javascript">
+        // Do not name the function "play()"
+        function playVideo(){
+            var video = document.getElementById('video');
+            video.play();
+            
+            video.addEventListener('ended',function(){
+                window.location = 'readBook.html';
+            });
+        }
+        </script>
+        <video controls id="video" width="auto" height="auto" onclick="playVideo()">
+            <source src="videos/Test-Video.mp4" type="video/mp4" />
+        </video>
+        
+
+
+
+</body>
+</html>

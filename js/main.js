@@ -13,7 +13,7 @@
     const cfg = {
 
         // Countdown Timer Final Date
-        finalDate : 'November 17, 2022 10:00:00',
+        finalDate : 'November 02, 2022 12:18:00',
         // MailChimp URL
         mailChimpURL : 'https://facebook.us1.list-manage.com/subscribe/post?u=1abf75f6981256963a47d197a&amp;id=37c6d8f4d6' 
 
@@ -29,7 +29,8 @@
         const preloader = document.querySelector('#preloader');
         const details = document.querySelector('.s-details');
 
-        if (!(preloader && details)) return;
+        // if (!(preloader && details)) return; 
+        if (!(preloader)) return;
 
         window.addEventListener('load', function() {
 
@@ -73,6 +74,7 @@
         const secondsSpan = document.querySelector('.counter .ss-seconds');
         let timeInterval;
         var text = document.getElementById("launcheButton");
+        var CountDiv = document.getElementById("CountTimerDiv");
 
         if (!(daysSpan && hoursSpan && minutesSpan && secondsSpan)) return;
 
@@ -87,13 +89,16 @@
                 }
 
                 text.style.display = "block";
+                CountDiv.style.display = "none"
                 return;
             }
             
 
             else{
-                text.style.display = "block"; //Have to remove this when the demo ends and Have to uncomment the following line
-                //text.style.display = "none";
+                // text.style.display = "block"; //Have to remove this when the demo ends and Have to uncomment the following line
+                CountDiv.style.display = "block"
+                text.style.display = "none";
+                
 
                 // To visible the Read Now Button on Launching time
             }
@@ -575,7 +580,8 @@
         const intro = document.querySelector('.s-intro');
         const details = document.querySelector('.s-details');
 
-        if (!(intro && details)) return;
+        // if (!(intro && details)) return;
+        if (!(intro)) return;
 
         const checkpoint = intro.offsetHeight;
         let opacity;
