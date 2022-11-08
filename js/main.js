@@ -13,7 +13,7 @@
     const cfg = {
 
         // Countdown Timer Final Date
-        finalDate : 'November 17, 2022 10:00:00',
+        finalDate : 'November 08, 2022 14:00:00',
         // MailChimp URL
         mailChimpURL : 'https://facebook.us1.list-manage.com/subscribe/post?u=1abf75f6981256963a47d197a&amp;id=37c6d8f4d6' 
 
@@ -73,7 +73,7 @@
         const minutesSpan = document.querySelector('.counter .ss-minutes');
         const secondsSpan = document.querySelector('.counter .ss-seconds');
         let timeInterval;
-        var text = document.getElementById("launcheButton");
+        var LaunchDiv = document.getElementById("launcheButton");
         var CountDiv = document.getElementById("CountTimerDiv");
 
         if (!(daysSpan && hoursSpan && minutesSpan && secondsSpan)) return;
@@ -88,16 +88,16 @@
                     clearInterval(timeInterval);
                 }
 
-                text.style.display = "block";
-                CountDiv.style.display = "none"
+                LaunchDiv.style.display = "block";
+                CountDiv.style.opacity = '0'
                 return;
             }
             
 
             else{
-                // text.style.display = "block"; //Have to remove this when the demo ends and Have to uncomment the following line
+                // LaunchDiv.style.display = "block"; //Have to remove this when the demo ends and Have to uncomment the following line
                 CountDiv.style.display = "block"
-                text.style.display = "none";
+                LaunchDiv.style.display = "none"
                 
 
                 // To visible the Read Now Button on Launching time

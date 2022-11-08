@@ -2831,7 +2831,7 @@ img.u-pull-left {
 .text-huge-title {
     --text-huge       : 11.2rem;
     --text-multiplier : 1;
-    font-family       : var(--font-3);
+    font-family       : 'Century Gothic';
     font-weight       : 400;
     font-size         : calc(var(--text-huge) * var(--text-multiplier));
     line-height       : 1.036;
@@ -2931,7 +2931,7 @@ img.u-pull-left {
  * ------------------------------------------------------------------- */
 .s-intro {
     --header-height     : 8.8rem;
-    --logo-width        : 78px;
+    --logo-width        : 135px;
     --text-display-size : 11.2rem;
     --text-multiplier   : 1;
     z-index             : 3;
@@ -3166,8 +3166,8 @@ img.u-pull-left {
     align-items    : flex-end;
     max-width      : var(--width-wider);
     height         : 100vh;
-    padding-top    : 20vh;
-    padding-bottom : 9.6rem;
+    padding-top    : 16vh;
+    padding-bottom : 1.6rem;
     position       : relative;
 }
 
@@ -3184,7 +3184,9 @@ img.u-pull-left {
 .s-intro__content-bottom {
     display    : flex;
     width      : calc(100% - 4rem);
-    margin-top : var(--vspace-2);
+    /* margin-top : var(--vspace-2); */
+    margin-top: 2%;
+    margin-right: -70%;
 
     background: #d5f365;
     border: none;
@@ -3299,9 +3301,6 @@ img.u-pull-left {
  * ## Launch
  * -------------------------------------------------------------------- */
  .s-intro__launch {
-    --color-btn-stroke       : rgba(255, 255, 255, .15);
-    --color-btn-stroke-hover : rgba(0, 0, 0, .25);
-    --color-btn-stroke-text  : white;
     z-index                  : 2;
     position                 : absolute;
     bottom                   : 10%;
@@ -4235,6 +4234,7 @@ img.u-pull-left {
   height: 2.75em;
   line-height: 2.5em;
   padding: 0 1em;
+  width: fit-content;
    }
    
    .bottone1:hover {
@@ -4278,3 +4278,163 @@ img.u-pull-left {
     transform: scale(0.97);
     box-shadow: 7px 5px 56px -10px #C3D900;
    }
+
+
+
+.LaunchBtn:link,
+.LaunchBtn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.LaunchBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.LaunchBtn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.LaunchBtn-white {
+    background-color: #f37821;
+    color: white;
+    border: #f37821;
+}
+
+.LaunchBtn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    background-color: #000000;
+}
+
+.LaunchBtn-white::after {
+    background-color: #f37821;
+}
+
+.LaunchBtn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.LaunchBtn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+  
+  .wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button89 {
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: white;
+    background: #4FD1C5;
+  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+   
+    padding: 10px;
+
+    z-index                  : 2;
+    position                 : absolute;
+    bottom                   : 8%;
+    right                    : 50%;
+    left                    : 50%;
+    }
+  
+    .button89::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: fit-content;
+    min-height: fit-content;
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .button89:hover, .button89:focus {
+    color: white;
+    transform: translateY(-6px);
+  }
+  
+  .button89:hover::before, .button89:focus::before {
+    opacity: 1;
+  }
+  
+  .button89::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  .button89:hover::after, .button89:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
