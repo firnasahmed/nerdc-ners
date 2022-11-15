@@ -4,16 +4,25 @@
  *
  * ------------------------------------------------------------------- */
 
+function DateChangeRequest(){
+    InputDate = document.getElementById("myInput").value;
+    alert(InputDate);
+    InputDate = cfg.finalDate;
+
+}
+
 (function(html) {
 
     'use strict';
 
     html.className = html.className.replace(/\bno-js\b/g, '') + 'js';
+    
+   
 
     const cfg = {
 
         // Countdown Timer Final Date
-        finalDate : 'November 17, 2022 10:00:00',
+        finalDate : 'November 15, 2022 10:00:00',
         // MailChimp URL
         mailChimpURL : 'https://facebook.us1.list-manage.com/subscribe/post?u=1abf75f6981256963a47d197a&amp;id=37c6d8f4d6' 
 
